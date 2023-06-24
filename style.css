@@ -1,6 +1,7 @@
 html {
   background: #C4DAE3;
   box-sizing: border-box;
+  color: #13212A;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
 }
@@ -22,8 +23,27 @@ body {
   box-sizing: inherit;
 }
 
+a {
+  color: #13212A;
+}
+
 i {
-  margin: 0 0.4em
+  margin: 0 0.2em
+}
+
+i:hover {
+  color: #FDC23E;
+  transform: scale(1.2);
+}
+
+img {
+  border: 5px white solid;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -80px;
+  margin-bottom: -70px;
 }
 
 main {
@@ -31,16 +51,15 @@ main {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  min-height: 22em;
-  min-width: 22em;
-  position: relative;
+  height: 26em;
+  width: 20em;
   overflow: hidden;
+  text-align: center;
 }
 
 .banner {
   background-color: #13212A;
-  height: 150px;
+  height: 120px;
   width: 100%;
 }
 
@@ -50,40 +69,49 @@ main {
   align-items: center;
 }
 
-.profile img {
-  border: 6px white solid;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  top: -80px;
-  margin-bottom: -70px;
-}
-
-/* .profile .name,
-.profile .location {
-  display: block;
-} */
-
 .profile .name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin: 0 0 0.35em
-    /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 
 .profile .location {
-  font-size: 0.9em;
+  opacity: 0.7;
+  font-size: 0.85em;
+  margin: 0.2em 0
 }
 
 .profile .headline {
+  font-size: 0.9rem;
   text-align: center;
-  margin: 1em
+  line-height: 1.7;
+  margin: 1em 1.5em
+}
+
+.headline a {
+  position: relative;
+  text-decoration: none;
+}
+
+.headline a::before {
+  content: "";
+  position: absolute;
+  left: -0.1px;
+  right: -0.1px;
+  bottom: 0;
+  height: 100%;
+  transform: scaleY(.3);
+  transition: transform .6s cubic-bezier(0.53, 0.21, 0, 1);
+  transform-origin: bottom;
+  background-color: #FDC23E;
+  opacity: 0.5;
+}
+
+.headline a:hover::before {
+  transform: scaleY(1);
 }
 
 .social-links {
-  border-top: 0.7px solid hsl(227, 10%, 46%, 0.4);
-  padding: em 0;
-  /* position: absolute; */
-  bottom: 0;
+  border-top: 1.5px solid #C4DAE3;
+  padding: 1em 0;
 }
