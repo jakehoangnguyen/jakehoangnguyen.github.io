@@ -115,3 +115,15 @@ main {
   border-top: 1.5px solid #C4DAE3;
   padding: 1em 0;
 }
+
+
+@media (min-width: 700px) {
+  main {
+    height: 20em;
+    width: 40em;
+  }
+
+  .banner {
+    height: 200px;
+  }
+}
